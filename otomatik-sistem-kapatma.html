@@ -18,25 +18,38 @@
             padding: 30px;
         }
         h1 {
-            color: #38bdf8;
+            color: #facc15;
         }
         .box {
             background: #0f172a;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-top: 20px;
+        }
+        ul {
+            line-height: 1.8;
         }
         a.button {
             display: inline-block;
-            margin-top: 15px;
-            padding: 12px 20px;
-            background: #22c55e;
-            color: black;
+            margin-top: 20px;
+            padding: 14px 24px;
+            background: #ef4444;
+            color: white;
             text-decoration: none;
             border-radius: 8px;
+            font-weight: bold;
         }
         a.button:hover {
-            background: #16a34a;
+            background: #dc2626;
+        }
+        .screenshots {
+            margin-top: 25px;
+        }
+        .screenshots img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .ad {
             margin-top: 30px;
@@ -46,33 +59,55 @@
             border-radius: 10px;
             color: #9ca3af;
         }
+        a.back {
+            display: inline-block;
+            margin-top: 25px;
+            color: #93c5fd;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
+
     <h1>⏱️ Otomatik Sistem Kapatıcı</h1>
 
     <div class="box">
         <p>
-            Bu uygulama, belirlediğin süre sonunda bilgisayarını otomatik olarak kapatır.
-            Python ile yazılmıştır ve hafiftir.
+            Otomatik Sistem Kapatıcı, belirlediğiniz süre sonunda bilgisayarınızı
+            otomatik olarak kapatan basit ve etkili bir masaüstü uygulamasıdır.
         </p>
 
+        <h3>⚙️ Özellikler</h3>
+        <ul>
+            <li>Dakika bazlı zamanlama</li>
+            <li>Tek tıkla başlatma</li>
+            <li>Arka planda sorunsuz çalışma</li>
+            <li>Hafif ve hızlı</li>
+        </ul>
+
         <h3>📥 İndirme</h3>
-        <a class="button"
-   href="https://github.com/yuusuffkkrkmmazz/yuusuffkkrkmmazz.github.io/releases/download/shutdown-v1.0/Otomatik.Sistem.Kapatici.exe">
-   Windows için indir (.exe)
-</a>
+        <a class="button" href="https://github.com/yuusuffkkrkmmazz/yuusuffkkrkmmazz.github.io/releases/download/shutdown-v1.0/Otomatik.Sistem.Kapatici.exe">
+            Windows için indir (.exe)
+        </a>
+
+        <h3>📸 Ekran Görüntüleri</h3>
+        <div class="screenshots">
+            <img src="images/ekran3.png" alt="Otomatik Sistem Kapatıcı ekran 1">
+            <img src="images/ekran4.png" alt="Otomatik Sistem Kapatıcı ekran 2">
+            <img src="images/ekran5.png" alt="Otomatik Sistem Kapatıcı ekran 3">
+        </div>
     </div>
 
     <div class="ad">
-        🔔 Buraya reklam alanı gelecek
+        🔔 Reklam Alanı (AdSense)
     </div>
 
-    <br>
-    <a href="index.html">⬅ Ana sayfaya dön</a>
+    <a class="back" href="index.html">⬅ Ana sayfaya dön</a>
+
 </div>
 
 </body>
 </html>
+
