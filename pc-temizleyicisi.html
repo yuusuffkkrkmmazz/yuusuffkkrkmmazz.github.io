@@ -23,7 +23,7 @@
         .box {
             background: #0f172a;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-top: 20px;
         }
         ul {
@@ -42,6 +42,14 @@
         a.button:hover {
             background: #16a34a;
         }
+        .screenshots {
+            margin-top: 25px;
+        }
+        .screenshots img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
         .ad {
             margin-top: 30px;
             padding: 15px;
@@ -52,7 +60,7 @@
         }
         a.back {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 25px;
             color: #93c5fd;
             text-decoration: none;
         }
@@ -61,28 +69,33 @@
 <body>
 
 <div class="container">
+
     <h1>🧹 PC Temizleyicisi</h1>
 
     <div class="box">
         <p>
-            PC Temizleyicisi, bilgisayarınızda gereksiz dosyaları temizlemenizi
-            ve temizlik tercihlerinizi kendiniz seçmenizi sağlayan hafif bir
-            masaüstü uygulamasıdır.
+            PC Temizleyicisi, bilgisayarınızda biriken gereksiz dosyaları
+            temizlemenizi ve temizlik işlemini kendi tercihlerinize göre
+            yönetmenizi sağlayan hafif bir masaüstü uygulamasıdır.
         </p>
 
         <h3>⚙️ Özellikler</h3>
         <ul>
             <li>Geçici dosyaları temizleme</li>
             <li>Temizlik tercihlerini seçebilme</li>
-            <li>Hızlı ve basit kullanım</li>
-            <li>Boyut: sadece <b>12.2 MB</b></li>
+            <li>Basit ve hızlı kullanım</li>
+            <li>Sadece <b>12.2 MB</b> boyut</li>
         </ul>
 
         <h3>📥 İndirme</h3>
-        <!-- BURAYA RELEASE LINKİ GELECEK -->
         <a class="button" href="https://github.com/yuusuffkkrkmmazz/yuusuffkkrkmmazz.github.io/releases/download/pc-cleaner-v1.0/PC.Temizleyici.exe">
             Windows için indir (.exe)
         </a>
+
+        <h3>📸 Ekran Görüntüsü</h3>
+        <div class="screenshots">
+            <img src="images/ekran2.png" alt="PC Temizleyicisi ekran görüntüsü">
+        </div>
     </div>
 
     <div class="ad">
@@ -90,7 +103,9 @@
     </div>
 
     <a class="back" href="index.html">⬅ Ana sayfaya dön</a>
+
 </div>
 
 </body>
 </html>
+
