@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564850473245957"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Python İle Küçük Ama İşlevli Uygulamalar Yapıyorum</title>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+
+    <title>Python ile Küçük Ama İşlevli Uygulamalar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: Arial, sans-serif;
             background: #0f172a;
             color: #e5e7eb;
             margin: 0;
-            padding: 0;
         }
+
         header {
             background: #020617;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
         }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* 🔍 Arama */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+
         .container {
             padding: 30px;
             max-width: 900px;
             margin: auto;
         }
+
         .card {
             background: #020617;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 20px;
-            min-height: 200px; /* 👈 KARTLAR EŞİT */
+            transition: transform 0.2s;
         }
-        a.button {
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .button {
             display: inline-block;
             padding: 12px 20px;
             background: #2563eb;
@@ -39,35 +73,45 @@
             text-decoration: none;
             border-radius: 8px;
             margin-top: 10px;
+            transition: background 0.2s;
         }
-        a.button:hover {
+
+        .button:hover {
             background: #1d4ed8;
         }
+
         footer {
             text-align: center;
             padding: 15px;
             background: #020617;
             color: #9ca3af;
         }
+
         .links {
             text-align: center;
             margin: 20px 0;
         }
+
         .links a {
-            color: #93c5fd;
+            color: #60a5fa;
+            margin: 0 8px;
             text-decoration: none;
-            margin: 0 5px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Python İle Küçük Ama İşlevli Uygulamalar Yapıyorum</h1>
-    <p>Uygulamalar Aşağıdadır.</p>
+    <h1>Python ile Küçük Ama İşlevli Uygulamalar</h1>
+    <p>Python ile geliştirdiğim hafif ve kullanışlı araçlar</p>
+
+    <!-- 🔍 Arama Çubuğu -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Uygulama ara...">
+    </div>
 </header>
 
-<div class="container">
+<div class="container" id="appList">
 
     <div class="card">
         <h2>⏱️ Otomatik Sistem Kapatıcı</h2>
@@ -77,15 +121,15 @@
 
     <div class="card">
         <h2>🧹 PC Temizleyicisi</h2>
-        <p>Bilgisayarı gereksiz dosyalardan arındıran, temizlik tercihleri sunan hafif uygulama.</p>
+        <p>Gereksiz dosyaları temizleyen, tercihler sunan hafif bir masaüstü uygulaması.</p>
         <a class="button" href="pc-temizleyicisi.html">Uygulamaya Git</a>
     </div>
 
     <div class="card">
-    <h2>🚀 Başlangıç Uygulamaları Düzenleyicisi</h2>
-    <p>Windows açılışında hangi uygulamaların çalışacağını kolayca yönetmeni sağlar.</p>
-    <a class="button" href="baslangic-uygulamalari-duzenleyicisi.html">Uygulamaya Git</a>
-</div>
+        <h2>🚀 Başlangıç Uygulamaları Düzenleyicisi</h2>
+        <p>Windows başlangıcında açılacak uygulamaları kolayca yönetmeni sağlar.</p>
+        <a class="button" href="baslangic-uygulamalari-duzenleyicisi.html">Uygulamaya Git</a>
+    </div>
 
 </div>
 
@@ -98,6 +142,21 @@
 <footer>
     © 2026 Yusuf | Tüm hakları saklıdır
 </footer>
+
+<!-- 🔍 Arama Script -->
+<script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    searchInput.addEventListener("keyup", function () {
+        const value = searchInput.value.toLowerCase();
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(value) ? "block" : "none";
+        });
+    });
+</script>
 
 </body>
 </html>
