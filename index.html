@@ -11,7 +11,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO + AdSense açıklama -->
     <meta name="description" content="Python ile geliştirilmiş ücretsiz ve hafif Windows masaüstü uygulamaları. PC temizleyici, otomatik sistem kapatıcı ve başlangıç yöneticisi.">
 
     <style>
@@ -32,7 +31,6 @@
             margin-bottom: 10px;
         }
 
-        /* 🔍 Arama */
         .search-box {
             margin-top: 20px;
         }
@@ -53,6 +51,14 @@
             margin: auto;
         }
 
+        .info-box {
+            background: #020617;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
         .card {
             background: #020617;
             padding: 20px;
@@ -63,10 +69,6 @@
 
         .card:hover {
             transform: translateY(-3px);
-        }
-
-        .card h2 {
-            margin-top: 0;
         }
 
         .button {
@@ -86,9 +88,10 @@
 
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: #020617;
             color: #9ca3af;
+            line-height: 1.6;
         }
 
         .links {
@@ -109,44 +112,53 @@
     <h1>Python Uygulamaları</h1>
 
     <p>
-        Python ile geliştirdiğim, günlük kullanımda işe yarayan
-        hafif ve tamamen ücretsiz Windows masaüstü uygulamalarını
-        bu sayfada bulabilirsiniz.
+        Günlük kullanımda işe yarayan, Python ile geliştirilmiş
+        ücretsiz ve hafif Windows araçlarını bu sayfada bulabilirsiniz.
     </p>
 
-    <!-- 🔍 Arama Çubuğu -->
     <div class="search-box">
         <input type="text" id="searchInput" placeholder="Uygulama ara...">
     </div>
 </header>
 
-<div class="container" id="appList">
+<div class="container">
 
-    <div class="card">
-        <h2>⏱️ Otomatik Sistem Kapatıcı</h2>
+    <div class="info-box">
+        <h2>Bu Sitede Neler Var?</h2>
         <p>
-            Belirlediğin süre sonunda bilgisayarı otomatik olarak
-            kapatan basit ve hafif bir Windows uygulaması.
+            Bu sitede, Windows kullanıcıları için geliştirdiğim küçük ama
+            faydalı masaüstü araçlarını paylaşıyorum. Amaç, bilgisayar
+            kullanımını kolaylaştıran basit ve hızlı çalışan uygulamalar
+            sunmaktır.
         </p>
-        <a class="button" href="otomatik-sistem-kapatma.html">Uygulamaya Git</a>
+
+        <p>
+            Tüm uygulamalar ücretsizdir ve düşük sistem kaynakları kullanacak
+            şekilde geliştirilmiştir. Yeni araçlar geliştirdikçe siteye
+            eklenmeye devam edecektir.
+        </p>
     </div>
 
-    <div class="card">
-        <h2>🧹 PC Temizleyicisi</h2>
-        <p>
-            Bilgisayarında biriken gereksiz dosyaları temizleyerek
-            performansını artırmanı sağlar.
-        </p>
-        <a class="button" href="pc-temizleyicisi.html">Uygulamaya Git</a>
-    </div>
+    <div id="appList">
 
-    <div class="card">
-        <h2>🚀 Başlangıç Uygulamaları Düzenleyicisi</h2>
-        <p>
-            Windows açılışında çalışan uygulamaları kolayca
-            yönetmeni sağlayan pratik bir araç.
-        </p>
-        <a class="button" href="baslangic-uygulamalari-duzenleyicisi.html">Uygulamaya Git</a>
+        <div class="card">
+            <h2>⏱️ Otomatik Sistem Kapatıcı</h2>
+            <p>Belirlediğin süre sonunda bilgisayarı otomatik kapatan hafif bir Windows uygulaması.</p>
+            <a class="button" href="otomatik-sistem-kapatma.html">Uygulamaya Git</a>
+        </div>
+
+        <div class="card">
+            <h2>🧹 PC Temizleyicisi</h2>
+            <p>Gereksiz dosyaları temizleyerek bilgisayar performansını artırmanı sağlar.</p>
+            <a class="button" href="pc-temizleyicisi.html">Uygulamaya Git</a>
+        </div>
+
+        <div class="card">
+            <h2>🚀 Başlangıç Uygulamaları Düzenleyicisi</h2>
+            <p>Windows açılışında çalışan uygulamaları kolayca yönetmeni sağlar.</p>
+            <a class="button" href="baslangic-uygulamalari-duzenleyicisi.html">Uygulamaya Git</a>
+        </div>
+
     </div>
 
 </div>
@@ -158,17 +170,15 @@
 </div>
 
 <footer>
-    © 2026 | Tüm hakları saklıdır
+    © 2026 Yusuf | Bu sitede paylaşılan uygulamalar eğitim ve kişisel kullanım amaçlı geliştirilmiştir.
 </footer>
 
-<!-- 🔍 Arama Script -->
 <script>
     const searchInput = document.getElementById("searchInput");
     const cards = document.querySelectorAll(".card");
 
     searchInput.addEventListener("keyup", function () {
         const value = searchInput.value.toLowerCase();
-
         cards.forEach(card => {
             const text = card.innerText.toLowerCase();
             card.style.display = text.includes(value) ? "block" : "none";
